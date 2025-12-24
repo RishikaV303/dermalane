@@ -34,7 +34,9 @@ const products = [
   stylistNote:
     "Works best when layered after a hydrating serum.",
   tagnames:
-    "Dermatologist-tested, fragrance-free, suitable for sensitive skin."
+    "Dermatologist-tested, fragrance-free, suitable for sensitive skin.",
+  bestseller: true
+  
 },
 {
   id: 2,
@@ -65,7 +67,8 @@ const products = [
     "Glycerin — hydrates."
   ],
   stylistNote: "Use twice daily for best results.",
-  tagnames: "pH-balanced, cruelty-free."
+  tagnames: "pH-balanced, cruelty-free.",
+  bestseller: true
 },
 {
   id: 3,
@@ -94,7 +97,8 @@ const products = [
     "Hyaluronic acid"
   ],
   stylistNote: "Use sunscreen after applying.",
-  tagnames: "Paraben-free, vegan."
+  tagnames: "Paraben-free, vegan.",
+  bestseller: true
 },
 {
   id: 4,
@@ -863,7 +867,8 @@ const products = [
     "Aloe vera"
   ],
   stylistNote: "Best for normal hair.",
-  tagnames: "pH-balanced."
+  tagnames: "pH-balanced.",
+  bestseller: true
 },
 {
   id: 30,
@@ -892,7 +897,8 @@ const products = [
     "Natural oils"
   ],
   stylistNote: "Wake up to smoother hair.",
-  tagnames: "No-rinse, night care."
+  tagnames: "No-rinse, night care.",
+  bestseller: true
 }
 ];
 

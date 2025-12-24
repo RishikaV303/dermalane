@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import products from "../data/products";
 import ProductCard from "../components/ProductCard";
 function Home() {
+  const bestSellers = products
+    .filter((product) => product.bestseller)
+    .slice(0, 5);
   return (
     <main>
       <section className="hero-section text-white text-center text-lg-start ">
@@ -149,41 +153,17 @@ function Home() {
             </div>
           </div>
           <div className="row g-4">
-           <ProductCard
-            id="1"
-            productname="Radiant Day Cream SPF 30"
-            productDescription="Vitamin C + ceramides for dewy protection."
-            price="450"
-            producttype="Hydration"
-            image="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=60"
-          />
-
-          <ProductCard
-            id="2"
-            productname="Midnight Repair Serum"
-            productDescription=" Peptides + bakuchiol calm inflamed skin."
-            price="630"
-            producttype="Barrier Repair"
-            image="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=60"
-          />
-
-          <ProductCard
-            id="3"
-            productname="Scalp Balance Shampoo"
-            productDescription=" Willow bark + mint detoxify without stripping."
-            price="440"
-            producttype="Balance"
-            image="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=60"
-          />
-
-          <ProductCard
-            id="4"
-            productname="Silk Strength Conditioner"
-            productDescription="Bond-repair technology for shine that lasts."
-            price="720"
-            producttype="Repair"
-            image="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=60"
-          />
+           {bestSellers.map((product) => (
+            <ProductCard
+              key={product.id}
+              id={product.id}
+              productname={product.name}
+              productDescription={product.description}
+              price={product.price}
+              producttype={product.category}
+              image={product.image}
+            />
+          ))}
           </div>
         </div>
       </section>
