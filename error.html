@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script>
-      var redirectTo = window.location.pathname.replace('/dermalane', '');
-      window.location.replace('/dermalane/?redirect=' + redirectTo);
+        var redirect = location.pathname.replace('/dermalane', '');
+        location.replace('/dermalane/?redirect=' + redirect);
     </script>
-  </head>
-  <body></body>
+</head>
+
+<body></body>
+
 </html>
