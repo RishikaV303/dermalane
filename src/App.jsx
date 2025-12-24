@@ -10,7 +10,7 @@ import Checkout from "./pages/Checkout.jsx";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/dermalane">
       <Navbar />
        <Routes>
         <Route path="/" element={<Home />} />
